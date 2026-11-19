@@ -47,10 +47,7 @@ const Home: React.FC = () => {
           <p className="text-xl md:text-2xl font-light text-white/70 mb-10 tracking-wide">
             July 11, 2026 | Deree ACG Campus
           </p>
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
-            <button className="w-full sm:w-auto min-w-[200px] bg-primary hover:bg-red-700 text-white px-8 py-4 rounded-lg font-bold text-lg uppercase tracking-widest transition-all glow-red">
-              Register Now
-            </button>
+          <div className="flex justify-center items-center">
             <button className="w-full sm:w-auto min-w-[200px] border border-white/20 hover:border-white/50 bg-white/5 px-8 py-4 rounded-lg font-bold text-lg uppercase tracking-widest transition-all">
               View Schedule
             </button>
