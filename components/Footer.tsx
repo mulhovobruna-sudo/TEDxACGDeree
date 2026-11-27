@@ -1,6 +1,7 @@
 
 import React from 'react';
 import { Link } from 'react-router-dom';
+import logo from '../logo-white.png';
 
 const Footer: React.FC = () => {
   return (
@@ -10,7 +11,7 @@ const Footer: React.FC = () => {
           <div className="flex flex-col items-center md:items-start gap-4">
             <Link to="/" className="block">
               <img 
-                src="https://storage.googleapis.com/tagger-bucket/tagger-upload-1740417970897-tedx_deree_logo.png" 
+                src={logo}
                 alt="TEDx Deree ACG" 
                 className="h-10 md:h-12 w-auto object-contain"
               />
