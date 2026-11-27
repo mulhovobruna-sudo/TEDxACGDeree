@@ -102,10 +102,15 @@ const Contact: React.FC = () => {
                 Gravias 6, Agia Paraskevi<br />
                 Athens, 153 42, Greece
               </p>
-              <button className="inline-flex items-center text-primary text-xs font-bold uppercase tracking-widest mt-4 hover:underline gap-2">
+              <a
+                href="https://www.google.com/maps/search/?api=1&query=Gravias+6%2C+Agia+Paraskevi%2C+Athens%2C+Greece"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center text-primary text-xs font-bold uppercase tracking-widest mt-4 hover:underline gap-2"
+              >
                 Get Directions
                 <span className="material-symbols-outlined text-sm">open_in_new</span>
-              </button>
+              </a>
             </div>
           </div>
 
