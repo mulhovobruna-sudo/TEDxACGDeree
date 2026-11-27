@@ -49,8 +49,6 @@ const Navbar: React.FC = () => {
           >
           <span className="material-symbols-outlined">{menuOpen ? 'close' : 'menu'} </span>
         </button>
-          <span className="material-symbols-outlined">menu</span>
-        </button>
       </div>
       {menuOpen && (
         <div className="md:hidden border-t border-white/10 bg-black/95 px-6 py-6 flex flex-col gap-6">
@@ -66,6 +64,8 @@ const Navbar: React.FC = () => {
               {item.name}
             </Link>
           ))}
+        </div> 
+      )}
     </nav>
   );
 };
