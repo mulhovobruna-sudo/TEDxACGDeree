@@ -45,7 +45,7 @@ const Home: React.FC = () => {
           </h1>
           <div className="h-px bg-gradient-to-r from-transparent via-primary to-transparent w-full max-w-md mx-auto mb-8"></div>
           <p className="text-xl md:text-2xl font-light text-white/70 mb-10 tracking-wide">
-            July 11, 2026 | Deree ACG Campus
+            April 13, 2027 | Deree ACG Campus
           </p>
           <div className="flex justify-center items-center">
             <button className="w-full sm:w-auto min-w-[200px] border border-white/20 hover:border-white/50 bg-white/5 px-8 py-4 rounded-lg font-bold text-lg uppercase tracking-widest transition-all">
@@ -102,7 +102,7 @@ const Home: React.FC = () => {
               Exploring the <span className="text-primary italic">Unknown</span>
             </h3>
             <p className="text-lg text-white/60 font-light leading-relaxed">
-              Beyond Horizons is more than just a theme; it's a call to action. We are gathering visionaries, innovators, and disruptors to dismantle the boundaries of technology and human potential. Join us at TEDx Deree ACG on July 11, 2026, as we peer into the future of ideas that will reshape our universe.
+              Beyond Horizons is more than just a theme; it's a call to action. We are gathering visionaries, innovators, and disruptors to dismantle the boundaries of technology and human potential. Join us at TEDx Deree ACG on April 13, 2027, as we peer into the future of ideas that will reshape our universe.
             </p>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {[
