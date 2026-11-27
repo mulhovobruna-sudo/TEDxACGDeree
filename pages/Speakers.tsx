@@ -46,35 +46,6 @@ const Speakers: React.FC = () => {
       </div>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
-        {filteredSpeakers.map(speaker => (
-          <div key={speaker.id} className="group relative bg-background-card rounded-xl overflow-hidden border border-white/5 hover:border-primary/50 transition-all duration-500 shadow-2xl">
-            <div className="relative aspect-[4/5] overflow-hidden">
-              <img 
-                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 grayscale group-hover:grayscale-0" 
-                src={speaker.imageUrl} 
-                alt={speaker.name}
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-80"></div>
-              
-              {/* Bio Overlay */}
-              <div className="absolute inset-0 bg-primary/90 p-8 flex flex-col justify-end opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-500 backdrop-blur-sm">
-                <p className="text-white text-sm leading-relaxed mb-6">{speaker.bio}</p>
-                <div className="flex gap-4">
-                  <span className="material-symbols-outlined text-white text-xl cursor-pointer hover:scale-125 transition-transform">share</span>
-                  <span className="material-symbols-outlined text-white text-xl cursor-pointer hover:scale-125 transition-transform">link</span>
-                </div>
-              </div>
-            </div>
-            
-            <div className="p-6 relative">
-              <div className="absolute -top-12 left-6">
-                <span className="bg-primary text-white text-[10px] font-black px-3 py-1 uppercase tracking-widest">{speaker.track}</span>
-              </div>
-              <h3 className="text-xl font-bold uppercase tracking-tight text-white mb-1 group-hover:text-primary transition-colors">{speaker.name}</h3>
-              <p className="text-slate-400 text-xs font-medium uppercase tracking-wider">{speaker.topic}</p>
-            </div>
-          </div>
-        ))}
         
         {/* Placeholder Card */}
         <div className="group relative flex flex-col items-center justify-center bg-white/[0.02] rounded-xl border border-white/5 border-dashed p-12 text-center">
