@@ -1,10 +1,11 @@
 
-import React from 'react';
+import React, {useState} from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import logo from '../logo-white.png';
 
 const Navbar: React.FC = () => {
   const location = useLocation();
+  const [menuOpen, setMenuOpen] = useState(false);
   
   const navItems = [
     { name: 'Home', path: '/' },
@@ -41,10 +42,30 @@ const Navbar: React.FC = () => {
           </button>
         </div>
 
-        <button className="md:hidden text-white">
+        <button 
+          className="md:hidden text-white"
+          onClick={() => setMenuOpen(!menuOpen)}
+          aria-label="Toggle menu"
+          >
+          <span className="material-symbols-outlined">{menuOpen ? 'close' : 'menu'} </span>
+        </button>
           <span className="material-symbols-outlined">menu</span>
         </button>
       </div>
+      {menuOpen && (
+        <div className="md:hidden border-t border-white/10 bg-black/95 px-6 py-6 flex flex-col gap-6">
+          {navItems.map((item) => (
+            <Link
+              key={item.name}
+              to={item.path}
+              onClick={() => setMenuOpen(false)}
+              className={`text-sm uppercase tracking-widest transition-colors ${
+                location.pathname === item.path ? 'text-primary font-bold' : 'text-white/70 hover:text-primary'
+              }`}
+            >
+              {item.name}
+            </Link>
+          ))}
     </nav>
   );
 };
