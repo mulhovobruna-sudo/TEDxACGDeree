@@ -7,16 +7,9 @@ type Partner = {
 };
 
 // ----- EDIT THESE LISTS -----
-const sponsors: Partner[] = [
-  { name: 'Sponsor Name', logo: '', url: 'https://example.com' },
-  { name: 'Sponsor Name', logo: '', url: 'https://example.com' },
-];
+const sponsors: Partner[] = [];
 
-const partners: Partner[] = [
-  { name: 'Partner Name', logo: '', url: 'https://example.com' },
-  { name: 'Partner Name', logo: '', url: 'https://example.com' },
-  { name: 'Partner Name', logo: '', url: 'https://example.com' },
-];
+const partners: Partner[] = [];
 // ----------------------------
 
 const PartnerCard: React.FC<{ partner: Partner }> = ({ partner }) => {
@@ -60,25 +53,40 @@ const Partners: React.FC = () => {
         </p>
       </div>
 
-      {/* Sponsors */}
-      <section className="mb-20">
-        <h2 className="text-primary text-sm font-bold uppercase tracking-[0.4em] mb-8 text-center">Sponsors</h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {sponsors.map((item, idx) => (
-            <PartnerCard key={idx} partner={item} />
-          ))}
-        </div>
-      </section>
+           {/* Sponsors */}
+      {sponsors.length > 0 && (
+        <section className="mb-20">
+          <h2 className="text-primary text-sm font-bold uppercase tracking-[0.4em] mb-8 text-center">Sponsors</h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {sponsors.map((item, idx) => (
+              <PartnerCard key={idx} partner={item} />
+            ))}
+          </div>
+        </section>
+      )}
 
       {/* Partners */}
-      <section className="mb-20">
-        <h2 className="text-primary text-sm font-bold uppercase tracking-[0.4em] mb-8 text-center">Partners</h2>
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-          {partners.map((item, idx) => (
-            <PartnerCard key={idx} partner={item} />
-          ))}
+      {partners.length > 0 && (
+        <section className="mb-20">
+          <h2 className="text-primary text-sm font-bold uppercase tracking-[0.4em] mb-8 text-center">Partners</h2>
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+            {partners.map((item, idx) => (
+              <PartnerCard key={idx} partner={item} />
+            ))}
+          </div>
+        </section>
+      )}
+
+       {/* More soon */}
+      {sponsors.length === 0 && partners.length === 0 && (
+        <div className="flex flex-col items-center justify-center min-h-[500px] bg-white/[0.02] rounded-xl border border-white/5 border-dashed p-12 text-center mb-20">
+          <div className="w-16 h-16 rounded-full bg-primary/5 flex items-center justify-center mb-4">
+            <span className="material-symbols-outlined text-primary text-3xl">help</span>
+          </div>
+          <h3 className="text-lg font-bold text-slate-500 uppercase tracking-widest">More Soon</h3>
+          <p className="text-slate-600 text-sm mt-2">Our partners and sponsors will be announced soon.</p>
         </div>
-      </section>
+      )}
 
       {/* Become a partner */}
       <div className="text-center p-12 glass-effect rounded-2xl border border-white/10">
