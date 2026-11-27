@@ -16,7 +16,7 @@ const Speakers: React.FC = () => {
         <div className="space-y-4">
           <h1 className="text-6xl md:text-8xl font-black tracking-tighter uppercase leading-[0.8] text-white">
             Speakers<span className="text-primary italic">.</span><br />
-            <span className="text-transparent border-t-2 border-primary/20 bg-clip-text bg-gradient-to-r from-white to-slate-500">2026</span>
+            <span className="text-transparent border-t-2 border-primary/20 bg-clip-text bg-gradient-to-r from-white to-slate-500">2027</span>
           </h1>
           <p className="text-slate-400 text-lg max-w-xl font-light">
             Exploring the consept of <span className="text-white font-medium">RULES</span> at Deree - The American College of Greece.
