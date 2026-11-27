@@ -5,7 +5,7 @@ import Contact from './Contact';
 
 const Home: React.FC = () => {
   const calculateTimeLeft = (): CountdownTime => {
-    const eventDate = new Date('2026-07-11T09:00:00').getTime();
+    const eventDate = new Date('2027-04-13T09:00:00').getTime();
     const now = new Date().getTime();
     const difference = eventDate - now;
 
