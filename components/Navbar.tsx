@@ -1,6 +1,7 @@
 
 import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
+import logo from '../logo-white.png';
 
 const Navbar: React.FC = () => {
   const location = useLocation();
@@ -17,7 +18,7 @@ const Navbar: React.FC = () => {
       <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
         <Link to="/" className="flex items-center group">
           <img 
-            src="https://storage.googleapis.com/tagger-bucket/tagger-upload-1740417970897-tedx_deree_logo.png" 
+            src={logo}
             alt="TEDx Deree ACG" 
             className="h-8 md:h-10 w-auto object-contain transition-transform duration-300 group-hover:scale-105"
           />
