@@ -76,7 +76,7 @@ const Footer: React.FC = () => {
         </div>
         <div className="border-t border-white/5 pt-10 text-center">
           <p className="text-white/20 text-xs uppercase tracking-widest leading-loose max-w-2xl mx-auto">
-            This TEDx event is independently organized by Deree ACG students and faculty under license from TED. © 2026 TEDx Deree ACG. All Rights Reserved.
+            This TEDx event is independently organized by Deree ACG students and faculty under license from TED. © 2027 TEDx Deree ACG. All Rights Reserved.
           </p>
         </div>
       </div>
